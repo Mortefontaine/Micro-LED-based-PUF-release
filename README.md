@@ -21,8 +21,8 @@ End-to-end pipeline for **micro-LED near-field image recognition** and **PUF
 | `YOLOv8_train.py` | Train YOLOv8 using labeled detection data. |
 | `YOLOv8_image.py` | Crop raw images using the trained YOLOv8 model. |
 | `frames_train_YOLO.rar` | YOLOv8 training dataset + labels. |
-| `TestImageSet_SelectedbyYOLO.rar` | Cropped 6-class dataset for classification/PUF. |
-| `ResNet_highPrivacy_final - Eng.py` | Final classifier training + 256-bit output. |
+| `TestImageSet_SelectedbyYOLO.rar` | Cropped 9-class dataset for classification/PUF. |
+| `ResNet_final.py` | Final classifier training + 256-bit output. |
 | `FuzzyExtractor.py` | Stabilize noisy 256-bit outputs into consistent bits. |
 
 ---
@@ -32,8 +32,8 @@ End-to-end pipeline for **micro-LED near-field image recognition** and **PUF
 - **`frames_train_YOLO.rar`**
   - Detection dataset for YOLOv8 training (images + labels).
 - **`TestImageSet_SelectedbyYOLO.rar`**
-  - Cropped dataset with 6 micro-LED classes.
-  - Used by `ResNet_highPrivacy_final - Eng.py`.
+  - Cropped dataset with 9 micro-LED classes.
+  - Used by `ResNet_final.py`.
 
 > Extract the `.rar` files to local directories before running the scripts.
 
@@ -96,10 +96,10 @@ Cropped outputs are resized to a uniform size for classification.
 
 ### 3) Train the ResNet Classifier + Generate 256-bit Output
 
-Update the dataset path inside `ResNet_highPrivacy_final - Eng.py` and run:
+Update the dataset path inside `ResNet_final.py` and run:
 
 ```bash
-python "ResNet_highPrivacy_final - Eng.py"
+python "ResNet_final.py.py"
 ```
 
 ### 4) Stabilize Bits with the Fuzzy Extractor
