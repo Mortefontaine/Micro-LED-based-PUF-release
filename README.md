@@ -99,7 +99,7 @@ Cropped outputs are resized to a uniform size for classification.
 Update the dataset path inside `ResNet_final.py` and run:
 
 ```bash
-python "ResNet_final.py.py"
+python "ResNet_final.py"
 ```
 
 ### 4) Stabilize Bits with the Fuzzy Extractor
