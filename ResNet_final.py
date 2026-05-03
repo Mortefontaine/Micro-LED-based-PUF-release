@@ -822,7 +822,7 @@ class MicroLEDPUFClassifier:
             print(f"Analysis summary has been saved to '{os.path.join(self.results_dir, filename)}'")
 
 if __name__ == "__main__":
-    DATA_DIR = 'D:/Research/PUF_micro-LED/videos3/frames_selected_by_YOLO_aug'
+    DATA_DIR = 'D:/Research/PUF_micro-LED/videos3/frames_selected_by_YOLO'
     KNOWN_CLASSES = ['M1', 'M2', 'M3', 'M4', 'M5', 'M6', 'M7', 'M8', 'M9']
 
     classifier_analyzer = MicroLEDPUFClassifier()
